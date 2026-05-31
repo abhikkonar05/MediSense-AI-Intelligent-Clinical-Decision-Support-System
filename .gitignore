@@ -1,0 +1,17 @@
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Databases
+medisense.db
+medisense.db-journal
+
+# Node / JS
+node_modules/
+dist/
+.env
+.env.*
+.DS_Store

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 font-sans antialiased overflow-x-hidden;
+    background-image: radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.5) 0, transparent 50%),
+                      radial-gradient(at 50% 0%, rgba(243, 232, 255, 0.4) 0, transparent 50%),
+                      radial-gradient(at 100% 0%, rgba(220, 252, 231, 0.3) 0, transparent 50%);
+  }
+
+  body.dark {
+    @apply bg-slate-950 text-slate-100;
+    background-image: radial-gradient(at 0% 0%, rgba(15, 23, 42, 0.8) 0, transparent 50%),
+                      radial-gradient(at 50% 0%, rgba(2, 6, 23, 0.9) 0, transparent 50%),
+                      radial-gradient(at 100% 0%, rgba(8, 47, 73, 0.3) 0, transparent 50%);
+  }
+}
+
+/* Glassmorphism Premium Classes */
+.glass-panel {
+  @apply backdrop-blur-md bg-white/60 border border-white/20 shadow-premium rounded-2xl transition-all duration-300;
+}
+
+.dark .glass-panel {
+  @apply backdrop-blur-md bg-slate-900/60 border border-slate-800/40 shadow-premium;
+}
+
+.glass-panel-hover {
+  @apply hover:bg-white/80 hover:shadow-premium-hover hover:-translate-y-0.5;
+}
+
+.dark .glass-panel-hover {
+  @apply hover:bg-slate-900/80 hover:shadow-premium-hover;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300/60 rounded-full transition-all;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700/60;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Text Glow Effect */
+.text-glow-brand {
+  text-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+}
